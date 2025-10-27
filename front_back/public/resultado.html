@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleResultado.css">
+    <title>Questões para nivel de conhecimento</title>
+</head>
+<body>
+    <div class="div-container">
+        <h1>Resultado</h1>
+        <div id="resultado"></div>
+        <button id="botao-voltar">Voltar à página principal</button>
+    </div>
+    
+
+  <script>
+    const resultadoDiv = document.getElementById("resultado");
+    const dados = JSON.parse(localStorage.getItem("resultado"));
+
+    if (dados) {
+      resultadoDiv.innerHTML = `
+        <h2>Você acertou ${dados.acertos} questões!</h2>
+        <h2>Seu nível é: ${dados.nivel}</h2>
+      `;
+    }
+
+    // Botão pra voltar
+    document.getElementById("botao-voltar").addEventListener("click", () => {
+      window.location.href = "/index/index.html";
+    });
+  </script>
+
+</body>
+</html>

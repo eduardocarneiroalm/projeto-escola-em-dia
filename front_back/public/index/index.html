@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola em Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="tela-loading" class="tela visivel">
+    <div class="loader">
+      <div class="spinner"></div>
+      <p>Carregando...</p>
+    </div>
+  </div>
+
+  <div id="tela-inicial" class="tela oculto">
+    <div class="container-inicial fade-in">
+      <h1 class="titulo">Escola em Dia</h1>
+      <p class="subtitulo">Organize seus estudos e prepare-se para o ENEM</p>
+      <button id="btn-entrar" class="botao">Entrar</button>
+    </div>
+  </div>
+
+  <div id="tela-principal" class="tela oculto">
+    <header class="cabecalho">
+      <h2 class="logo">📘 Escola em Dia</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Banco de Questões</a></li>
+          <li><a href="#">Redação</a></li>
+          <li><a href="#">Trilhas</a></li>
+          <li><a href="#">Recursos</a></li>
+          <li><a href="#">Entrar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="conteudo fade-in">
+      <h1>Preparação completa e personalizada para o ENEM</h1>
+      <button class="botao-principal" onclick="window.location.href='/index.html'">Comece agora</button>
+
+      <div class="cards">
+        <div class="card verde">
+          <div class="icone">✅</div>
+          <h3>Banco de Questões</h3>
+        </div>
+        <div class="card amarelo">
+          <div class="icone">✏️</div>
+          <h3>Redação Interativa</h3>
+        </div>
+        <div class="card roxo">
+          <div class="icone">📈</div>
+          <h3>Trilhas</h3>
+        </div>
+        <div class="card azul">
+          <div class="icone">🎬</div>
+          <h3>Recursos Extras</h3>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <a href="#">Contato</a>
+      <a href="#">Termos</a>
+      <a href="#">Suporte</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

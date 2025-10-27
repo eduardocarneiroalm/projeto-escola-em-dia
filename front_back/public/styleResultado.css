@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #111827;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #374151;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.div-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 151, 0, 0.356);
+    border: solid 2px rgba(0, 185, 0, 0.699);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#botao-voltar {
+    margin-top: 20px;
+    background-color: #00df30;
+    color: #111827;
+    padding: 10px 20px;
+    border: solid 2px #00a72a;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#botao-voltar:hover {
+    background-color: #00b62d;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
