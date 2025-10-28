@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
 });
 
 // Suas rotas personalizadas
-app.use('/nivel', nivelRoutes);
+// app.use('/nivel', nivelRoutes);
 
 // Inicia o servidor
 app.listen(PORT, () => {
