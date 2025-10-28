@@ -9,13 +9,14 @@ const app = express();
 const port = 3030;
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 
 app.use('/nivel', nivelRoutes);
 // Config pra usar __dirname em módulos ES
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Força o servidor a carregar o HTML certo quando acessar "/"
 app.get('/', (req, res) => {
