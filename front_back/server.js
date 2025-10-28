@@ -2,6 +2,8 @@
 
 import express from 'express';
 import nivelRoutes from './routes/nivelroutes.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const port = 3030;
@@ -10,6 +12,16 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(express.static('public/index'));
 app.use('/nivel', nivelRoutes);
+
+
+// Config pra usar __dirname em módulos ES
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Força o servidor a carregar o HTML certo quando acessar "/"
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index', 'index.html'));
+});
 
 app.listen(port, () => {
     console.log("Servidor rodando na porta", port)
