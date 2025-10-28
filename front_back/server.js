@@ -34,7 +34,7 @@ import { fileURLToPath } from 'url';
 const app = express();
 
 // Render usa a variável PORT automaticamente
-const PORT = process.env.PORT || 3030;
+const PORT = 3030;
 
 // Corrigindo __dirname em módulos ES
 const __filename = fileURLToPath(import.meta.url);
