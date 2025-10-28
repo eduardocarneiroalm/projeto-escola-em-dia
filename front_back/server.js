@@ -12,15 +12,13 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(express.static('public/index'));
 app.use('/nivel', nivelRoutes);
-
-
 // Config pra usar __dirname em módulos ES
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Força o servidor a carregar o HTML certo quando acessar "/"
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index', 'index.html'));
+  res.sendFile(path.join(__dirname,'public', 'index', 'index.html'));
 });
 
 app.listen(port, () => {
