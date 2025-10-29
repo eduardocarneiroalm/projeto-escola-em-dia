@@ -1,74 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escola em Dia</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Escola em Dia</title>
 </head>
 <body>
-  <div id="tela-loading" class="tela visivel">
-    <div class="loader">
-      <div class="spinner"></div>
-      <p>Carregando...</p>
+    <h1>Questões para escolha de Nível</h1>
+
+    <p id="frase-teste">Responda as questões para ser definido o seu nível de conhecimento. Após respondido, a Escola em Dia será personalizado para o seu nível:</p>
+
+    <div class="questoes fade-in">
+        <div class="questao-1">
+            <h2>Questão 1</h2>
+
+        <h4>Texto:</h4>
+    
+        <p>“Durante o isolamento social, muitas pessoas passaram a cozinhar mais em casa, buscando receitas simples e práticas para o dia a dia.”</p>
+
+        <p>Pergunta:</p>
+        <p>O texto mostra que, durante o isolamento social, as pessoas:</p>
+
+        <label for=""><input type="radio" name="resposta-q1" id="input-q1" value="a) Passaram a comprar mais comida pronta.">a) Passaram a comprar mais comida pronta.</label><br>
+        <label for=""><input type="radio" name="resposta-q1" id="input-q1" value="b) Pararam de se alimentar corretamente.">b) Pararam de se alimentar corretamente.</label><br>
+        <label for=""><input type="radio" name="resposta-q1" id="input-q1" value="c) Buscaram preparar suas próprias refeições.">c) Buscaram preparar suas próprias refeições.</label><br>
+        <label for=""><input type="radio" name="resposta-q1" id="input-q1" value="d) Deixaram de se interessar por receitas novas.">d) Deixaram de se interessar por receitas novas.</label>
+        </div>
+        
+        <div class="questao-2">
+            <h2>Questão 2</h2>
+
+        <p>Durante uma caminhada, João percebe que, ao subir uma ladeira, seu corpo fica mais cansado. Isso acontece porque ele está realizando um trabalho físico contra a força da gravidade.</p>
+
+        <p>Pergunta:</p>
+        <p>Qual das alternativas explica melhor o motivo do cansaço de João?</p>
+
+        <label for=""><input type="radio" name="resposta-q2" id="input-q2" value="a) A energia potencial gravitacional diminui.">a) A energia potencial gravitacional diminui.</label><br>
+        <label for=""><input type="radio" name="resposta-q2" id="input-q2" value="b) A energia cinética se transforma em luz.">b) A energia cinética se transforma em luz.</label><br>
+        <label for=""><input type="radio" name="resposta-q2" id="input-q2" value="c) Ele precisa gastar energia para vencer a gravidade." >c) Ele precisa gastar energia para vencer a gravidade.</label><br>
+        <label for=""><input type="radio" name="resposta-q2" id="input-q2" value="d) O atrito com o solo elimina todo o esforço realizado.">d) O atrito com o solo elimina todo o esforço realizado.</label>
+        </div>
+
+        <div class="questao-3">
+            <h2>Questão 3</h2>
+
+        <p>Uma loja oferece um desconto de 20% em um produto que custa R$ 150,00. Após o desconto, o cliente ainda precisa pagar um imposto de 10% sobre o valor com desconto.</p>
+
+        <p>Qual será o preço final pago pelo cliente?</p>
+
+        <label for=""><input type="radio" name="resposta-q3" id="input-q3" value="a) R$ 135,00">a) R$ 135,00</label><br>
+        <label for=""><input type="radio" name="resposta-q3" id="input-q3" value="b) R$ 132,00">b) R$ 132,00</label><br>
+        <label for=""><input type="radio" name="resposta-q3" id="input-q3" value="c) R$ 120,00">c) R$ 120,00</label><br>
+        <label for=""><input type="radio" name="resposta-q3" id="input-q3" value="d) R$ 108,00">d) R$ 108,00</label><br>
+
+        </div>
+
+        <button id="button">Enviar Respostas</button>
+        
     </div>
-  </div>
-
-  <div id="tela-inicial" class="tela oculto">
-    <img src="img/escola em dia - logo.jpg" alt="Logo Escola em Dia" width="200">
-    <div class="container-inicial fade-in">
-      <h1 class="titulo">Escola em Dia</h1>
-      <p class="subtitulo">"Conecte-se ao seu melhor desempenho"</p>
-      <button id="btn-entrar" class="botao">Entrar</button>
-    </div>
-  </div>
-
-  <div id="tela-principal" class="tela oculto">
-    <header class="cabecalho">
-      <h2 class="logo">📘 Escola em Dia</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Banco de Questões</a></li>
-          <li><a href="#">Redação</a></li>
-          <li><a href="#">Trilhas</a></li>
-          <li><a href="#">Recursos</a></li>
-          <li><a href="#">Entrar</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="conteudo fade-in">
-      <h1>Preparação completa e personalizada para o ENEM</h1>
-      <button class="botao-principal" onclick="window.location.href='/index.html'">Comece agora</button>
-
-      <div class="cards">
-        <div class="card verde">
-          <div class="icone">✅</div>
-          <h3>Banco de Questões</h3>
-        </div>
-        <div class="card amarelo">
-          <div class="icone">✏️</div>
-          <h3>Redação Interativa</h3>
-        </div>
-        <div class="card roxo">
-          <div class="icone">📈</div>
-          <h3>Trilhas</h3>
-        </div>
-        <div class="card azul">
-          <div class="icone">🎬</div>
-          <h3>Recursos Extras</h3>
-        </div>
-      </div>
-    </main>
-
-    <footer>
-      <a href="#">Contato</a>
-      <a href="#">Termos</a>
-      <a href="#">Suporte</a>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
